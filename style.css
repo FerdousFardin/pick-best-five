@@ -1,0 +1,37 @@
+header{
+    position: relative;
+    
+}
+.bg-black{
+    background-color: black;
+}
+.p-custom{
+    padding: 10rem;
+}
+.font-custom{
+    font-family: 'Berkshire Swash';
+    font-size: 4rem;
+    color: #FF5E19;
+}
+.custom-positioning-player{
+    background-image: url(./images/bg-img.png);
+    background-position: 0 -1px;
+    /* background-origin: padding-box; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.custom-positioning-ball{
+    background:#212529;
+    outline: 3rem solid #212529; 
+    border-radius: 50%;
+    border-top-left-radius: 10%;
+    position: absolute;
+    right: -1rem;
+    bottom: -1rem;
+    width: 150px;
+}
+.custom-size-plr{
+    width: 100%;
+    height: 204px;
+}
