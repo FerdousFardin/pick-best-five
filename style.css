@@ -33,7 +33,7 @@ header{
 .head-marker{
     position: absolute;
     bottom: -1.5rem;
-    right: 10rem;
+    right: 16rem;
 }
 .messi-card{
     position: absolute;
@@ -47,6 +47,13 @@ header{
 .fixed-height{
  height: 305.5px;   
 }
+.orng-marker{
+    position: relative;
+    bottom: 1rem;
+}
+.border-custom{
+    border:#ff5e19;
+}
 .custom-input{
     border: 0.12rem solid white;
     color: white;
@@ -55,4 +62,5 @@ header{
 }
 .text-orange{
     color: #FF5E19;
+    /* border-color: #ff5e19; */
 }
