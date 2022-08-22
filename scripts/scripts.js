@@ -60,12 +60,25 @@ document.getElementById("calc-btn").addEventListener("click", () => {
   const perPlayerCost = getElementValueById("per-player");
   const totalPlayer = totalChildElement("player-list");
   if (errorTags("input")) return;
-  else if (totalPlayer < 1) {
-    alert("You Have To Select Atleast One Player ❌");
-  } else if (isNaN(perPlayerCost)) {
-    alert("Inputs Can Not be Empty ❌");
-  } else {
+  else if (totalPlayer < 1) alert("You Have To Select Atleast One Player ❌");
+  else if (isNaN(perPlayerCost)) alert("Inputs Can Not be Empty ❌");
+  else {
     const totalPlayerExpense = perPlayerCost * totalPlayer;
     setElementTextById("player-expense", totalPlayerExpense);
+  }
+});
+//calculate-total
+document.getElementById("total-btn").addEventListener("click", () => {
+  const playerExpenseString =
+    document.getElementById("player-expense").innerText;
+  const playerExpense = parseInt(playerExpenseString);
+  const managerExpense = getElementValueById("manager-cost");
+  const coachExpense = getElementValueById("coach-cost");
+  if (errorTags("input")) return;
+  else if (isNaN(managerExpense) || isNaN(coachExpense))
+    alert("Inputs Can Not be Empty ❌");
+  else {
+    const totalExpense = playerExpense + managerExpense + coachExpense;
+    setElementTextById("total", totalExpense);
   }
 });
