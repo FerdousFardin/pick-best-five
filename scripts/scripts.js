@@ -45,7 +45,7 @@ for (const selectBtn of selectBtns) {
         event.target.parentNode.querySelector(".card-title").textContent;
       const listItemNew = document.createElement("li");
       listItemNew.innerText = playerName;
-      listItemNew.classList.add("py-2", "fs-5");
+      listItemNew.classList.add("py-2", "fs-5", "px-3");
       playerList.appendChild(listItemNew);
       selectBtn.setAttribute("disabled", true);
       selectBtn.innerText = "Selected";

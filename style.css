@@ -15,8 +15,6 @@ header{
 }
 .custom-positioning-player{
     background-image: url(./images/bg-img.png);
-    background-position: 0 -1px;
-    /* background-origin: padding-box; */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -38,6 +36,9 @@ header{
 .custom-height{
     height: 390px;
 }
+.fixed-height{
+ height: 305.5px;   
+}
 .custom-input{
     border: 0.12rem solid white;
     color: white;
@@ -47,6 +48,3 @@ header{
 .text-orange{
     color: #FF5E19;
 }
-/* hr{
-    border-top: 1px solid white;
-} */
