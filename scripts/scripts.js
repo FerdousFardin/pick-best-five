@@ -49,6 +49,8 @@ for (const selectBtn of selectBtns) {
       playerList.appendChild(listItemNew);
       selectBtn.setAttribute("disabled", true);
       selectBtn.innerText = "Selected";
+      selectBtn.classList.add("btn-secondary");
+      selectBtn.classList.remove("btn-primary");
     } else {
       alert("Warning! You Have Added Maximum Amount of Players ❌");
       return;
