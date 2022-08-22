@@ -1,3 +1,6 @@
+body{
+    background-color: #151515;
+}
 header{
     position: relative;
     
@@ -12,22 +15,30 @@ header{
     font-family: 'Berkshire Swash';
     font-size: 4rem;
     color: #FF5E19;
+    position: relative;
 }
 .custom-positioning-player{
-    background-image: url(./images/bg-img.png);
     position: absolute;
     bottom: 0;
     left: 0;
 }
+.priority{
+    z-index: 10;
+}
 .custom-positioning-ball{
-    background:#212529;
-    outline: 3rem solid #212529; 
-    border-radius: 50%;
-    border-top-left-radius: 10%;
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 150px;
+}
+.head-marker{
+    position: absolute;
+    bottom: -1.5rem;
+    right: 10rem;
+}
+.messi-card{
+    position: absolute;
+    top: 4.375rem;
+    right: 7.5rem;
 }
 .custom-size-plr{
     width: 100%;
