@@ -1,21 +1,21 @@
 /**
  * Utility Functions
  */
-const getElementValueById = (elementId) => {
+function getElementValueById(elementId) {
   const elementString = document.getElementById(elementId).value;
   const element = parseInt(elementString);
   return element;
-};
-const totalChildElement = (parentElementId) => {
+}
+function totalChildElement(parentElementId) {
   const totalChildElement =
     document.getElementById(parentElementId).childNodes.length;
   return totalChildElement;
-};
-const setElementTextById = (elementId, text) => {
+}
+function setElementTextById(elementId, text) {
   const elementField = document.getElementById(elementId);
   elementField.innerText = text;
-};
-const errorTags = (tagName) => {
+}
+function errorTags(tagName) {
   const tags = document.getElementsByTagName(tagName);
   for (const tag of tags) {
     const tagValue = tag.value;
@@ -30,14 +30,14 @@ const errorTags = (tagName) => {
     }
   }
   return false;
-};
+}
 /**
  * Website Interactivities
  */
 // select btns
 const selectBtns = document.querySelectorAll(".select-btn");
 for (const selectBtn of selectBtns) {
-  selectBtn.addEventListener("click", (event) => {
+  selectBtn.addEventListener("click", function (event) {
     const playerList = document.getElementById("player-list");
     const totalPlayer = totalChildElement("player-list");
     if (totalPlayer < 5) {
@@ -67,7 +67,7 @@ for (const selectBtn of selectBtns) {
   });
 }
 //calculate
-document.getElementById("calc-btn").addEventListener("click", () => {
+document.getElementById("calc-btn").addEventListener("click", function () {
   const perPlayerCost = getElementValueById("per-player");
   const totalPlayer = totalChildElement("player-list");
   if (errorTags("input")) return;
@@ -79,7 +79,7 @@ document.getElementById("calc-btn").addEventListener("click", () => {
   }
 });
 //calculate-total
-document.getElementById("total-btn").addEventListener("click", () => {
+document.getElementById("total-btn").addEventListener("click", function () {
   const playerExpenseString =
     document.getElementById("player-expense").innerText;
   const playerExpense = parseInt(playerExpenseString);
